@@ -3,13 +3,13 @@
 
 using namespace std;
 
-struct Data_n {
+struct Data {
     int dia;
     int mes;
     int ano;
 };
 
-bool dataValida (int dia, int mes, int ano){
+bool dataValida (int dia, int mes, int ano) {
     if (ano < 1900 || ano > 2100) { return false; }
     if (mes < 1 || mes > 12) { return false; }
     int diasNoMes = 0;
@@ -28,19 +28,17 @@ bool dataValida (int dia, int mes, int ano){
     return true;
 }
 
-bool dataValida(struct Data_n data){
-
+bool dataValida(struct Data data) {
     return dataValida(data.dia, data.mes, data.ano);
 }
 
-void alteraData(struct Data_n *data, int dia, int mes, int ano){
+void alteraData(struct Data *data, int dia, int mes, int ano) {
     if(dataValida(dia, mes, ano)) {
         data->dia = dia;
         data->mes = mes;
         data->ano = ano;
     }
     else {
-        cout << "Data inválida, atribuindo 1/1/1900" << endl;
         data->dia = 1;
         data->mes = 1;
         data->ano = 1900;
@@ -57,21 +55,11 @@ string to_string_zeros(int numero) {
     return numeroString;
 }
 
-string dataParaString(struct Data_n data, string format = "pt-br")
+string dataParaString(struct Data data)
 {
     string dia = to_string_zeros(data.dia);
     string mes = to_string_zeros(data.mes);
     string ano = to_string_zeros(data.ano);
 
     return dia+"/"+mes+"/"+ano;
-}
-
-
-int main (){
-    struct Data_n data;
-
-    alteraData(&data, 15,8,2023);
-    cout << dataParaString(data) << endl;
-
-    return 0;
 }
