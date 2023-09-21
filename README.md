@@ -50,3 +50,7 @@ Normas (Case Sensitive):
 
 Para funções: camelCase
 Para variãveis: snake_case
+Estrutura: 
+ - Cabecalho
+ - Funções
+ - Main (Menu)
