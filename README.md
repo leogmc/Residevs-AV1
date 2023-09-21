@@ -30,3 +30,5 @@ Em gestão de Roteiros foi implementada as opções:
 Em Menu Principal tem as opcoes para chamar ou a gestão de Passageiros, ou a gestão de Roteiros ou sair do programa
 
 No arquivo data.h e dataUtils.cpp contem a biblioteca e a implementação da struct Data
+
+Para executar o programa basta colocar no terminal ./meu_programa
