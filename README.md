@@ -17,14 +17,14 @@ Em gestão de Passageiros foi implementada as opções:
     
     Funcões:
     
-        *int gestaoPassageiro(vector<Passageiro> &passageiros);*
-        *void incluirPassageiro(vector<Passageiro> &passageiros);*
-        *void alterarPassageiro(vector<Passageiro> &passageiros);*
-        *void excluirPassageiro(vector<Passageiro> &passageiros);*
-        *void listarPassageiros(vector<Passageiro> passageiros);*
-        *void localizarPassageiroCPF(vector<Passageiro> passageiros);*
-        *bool verificaPassageiroExiste(vector<Passageiro> passageiros, string cpf);*
-        *int retornaIdade(Data dtNascimento);*
+        int gestaoPassageiro(vector<Passageiro> &passageiros);
+        void incluirPassageiro(vector<Passageiro> &passageiros);
+        void alterarPassageiro(vector<Passageiro> &passageiros);
+        void excluirPassageiro(vector<Passageiro> &passageiros);
+        void listarPassageiros(vector<Passageiro> passageiros);
+        void localizarPassageiroCPF(vector<Passageiro> passageiros);
+        bool verificaPassageiroExiste(vector<Passageiro> passageiros, string cpf);
+        int retornaIdade(Data dtNascimento);
 
 Em gestão de Roteiros foi implementada as opções:
 
@@ -40,15 +40,14 @@ Em gestão de Roteiros foi implementada as opções:
 
     Funções:
     
-        *int gestaoRoteiro(vector<Roteiro> &roteiros);*
-        *void incluirRoteiro(vector<Roteiro> &roteiros);*
-        *void alterarRoteiro(vector<Roteiro> &roteiros);*
-        *void excluirRoteiro(vector<Roteiro> &roteiros);*
-        *void listarRoteiros(vector<Roteiro> roteiros);*
-        *void localizarRoteiro(vector<Roteiro> roteiros);*
-        *bool verificaRoteiroExiste(vector<Roteiro> roteiros, int codigo);*
+        int gestaoRoteiro(vector<Roteiro> &roteiros);
+        void incluirRoteiro(vector<Roteiro> &roteiros);
+        void alterarRoteiro(vector<Roteiro> &roteiros);
+        void excluirRoteiro(vector<Roteiro> &roteiros);
+        void listarRoteiros(vector<Roteiro> roteiros);
+        void localizarRoteiro(vector<Roteiro> roteiros);
+        bool verificaRoteiroExiste(vector<Roteiro> roteiros, int codigo);
     
-
 Em Menu Principal tem as opcoes para chamar ou a gestão de Passageiros, ou a gestão de Roteiros ou sair do programa
 
 No arquivo data.h e dataUtils.cpp contem a biblioteca e a implementação da struct Data
