@@ -9,8 +9,8 @@ struct Ocorrencia{
     string descricao;
     Data data;
     int hora;// duração real;
-    string cpf_passageiro;
-    int cod_roteiro;
+    Passageiro passageiro;
+    Roteiro roteiro;
 }; 
 
 
