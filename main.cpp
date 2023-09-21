@@ -2,17 +2,14 @@
 #include <string>
 #include <vector>
 
-
 #include "passageiro.cpp"
 #include "roteiro.cpp"
-#include "embarca.cpp"
-#include "data.cpp"
 
 using namespace std;
 
 void menu();
 int main(){
-    vector<Embarca> embarques;// vectores principais;
+    //vector<Embarca> embarques;// vectores principais; (EDITAR DEPOIS)
     vector<Passageiro> passageiros;//vectores principais;
     vector<Roteiro> roteiros; //vectores principais;
 
@@ -28,7 +25,7 @@ int main(){
             gestaoRoteiro(roteiros);//função dentro do arquivo roteiro.cpp
            
         }else if(op==3){
-            gestaoEmbarque(embarques);//função dentro do arquivo embarcar.cpp
+           // gestaoEmbarque(embarques);//função dentro do arquivo embarcar.cpp (EDITAR DEPOIS)
         }else{
             validar = false;
         }
@@ -37,9 +34,10 @@ int main(){
     return 0;
 }
 void menu(){
-    cout << "Bem vindo a Vans TransPaGente" <<endl;
-    cout << "1- Acessar Menu de Passageiro"<< endl;
-    cout << "2- Acessar Menu de Roteiro"<< endl; 
-    cout << "3- Acessar Menu de Embarque"<< endl; 
-    cout << "0-Sair"<< endl;
+    cout << "Bem-vindo ao TransPaGente!" <<endl;
+    cout << "--------------------------------" <<endl;
+    cout << "[1] - Acessar Menu de Passageiro"<< endl;
+    cout << "[2] - Acessar Menu de Roteiro"<< endl; 
+    cout << "[3] - Acessar Menu de Embarque"<< endl; 
+    cout << "[0] - Sair."<< endl;
 }
