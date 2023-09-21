@@ -31,19 +31,19 @@ GESTÃO DE EMBARQUES:
 GESTÃO DE OCORRENCIA:
 
 
-(6) 1.Incluir ocorrência
+(6) 1.Incluir ocorrência - Lorena
 
 
-(7) 2.Excluir ocorrência 
+(7) 2.Excluir ocorrência - Carlos
 
 
-(8) 3.Alterar ocorrência 
+(8) 3.Alterar ocorrência - Deniel
 
 
-(9) 4.Listar todas as ocorrências por Passageiro 
+(9) 4.Listar todas as ocorrências por Passageiro - Leandro
 
 
-(10) 5. Listar todas as ocorrências por Roteiro
+(10) 5. Listar todas as ocorrências por Roteiro - Náthalie
 
 
 Normas (Case Sensitive):
