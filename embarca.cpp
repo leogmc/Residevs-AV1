@@ -10,7 +10,7 @@ struct Embarca{
     int hora;//hora real de embarque
     int duracao;// duração real;
     vector<Passageiro> passageiros;//Embarque[0], passageiro[i], 
-    int cod_roteiro;
+    Roteiro roteiro;
 }; 
 
 
