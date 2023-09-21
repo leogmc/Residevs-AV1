@@ -3,6 +3,8 @@
 #include <iostream>
 #include <limits>
 #include <ctime>
+#include <regex>
+
 using namespace std;
 
 //validar se está vazio o campo
@@ -99,6 +101,7 @@ bool validarData(const string& data) {
 
 // Função para verificar se uma pessoa é maior ou menor de idade
 bool verificarIdade(const string& dataNascimento) {
+    
     // Obter a data atual
     time_t agora = time(0);
     tm* dataAtual = localtime(&agora);
@@ -124,4 +127,11 @@ bool verificarIdade(const string& dataNascimento) {
     } else {
         return false;
     }
+}
+
+bool validar_data_hora(const std::string& data_hora) {
+    // O formato desejado é "YYYY-MM-DD HH:MM:SS"
+    std::regex padrao("^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}$");
+
+    return std::regex_match(data_hora, padrao);
 }

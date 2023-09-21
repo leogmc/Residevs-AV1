@@ -5,11 +5,15 @@
 
 
 using namespace std;
-
+struct Data{
+    string data;
+    int hora;
+};
 struct Roteiros{
     int codigo;
     string origem;
     string destino;
+    Data data_hora_prevista;
 };
 
 //Prototipos de função
@@ -114,6 +118,7 @@ void alterarRoteiro(vector<Roteiros> &roteiros, int codigo) {
     int posicao = localizarRoteiro(roteiros, codigo);
     string nova_origem;
     string novo_destino;
+    Data data;
     if (posicao != -1) {
         // Exibir o objeto Roteiros encontrado na posição 'posicao'.
         cout << "Código: " << roteiros[posicao].codigo << endl;
@@ -152,6 +157,19 @@ void alterarRoteiro(vector<Roteiros> &roteiros, int codigo) {
             getline(cin, novo_destino);
             roteiros[posicao].destino = validarCampo(novo_destino, "destino");
         }
+        cout << "Deseja alterar a Data e hora? (S/N): ";
+        cin >> resposta;
+        if (resposta == "S" || resposta == "s") {
+            cout << "Nova Data ";
+            cin.ignore();  // Para limpar o buffer do teclado
+            getline(cin, data.data);
+            roteiros[posicao].data_hora_prevista.data = data.data;
+           
+            cout << "Nova Hora ";
+            cin >> data.hora;
+            roteiros[posicao].data_hora_prevista.hora = data.hora;
+
+        }
     }else{
          cout << "Roteiro não encontrado." << endl;
     }
@@ -159,35 +177,48 @@ void alterarRoteiro(vector<Roteiros> &roteiros, int codigo) {
 }
 // Função para cadastrar roteiro
 
+
 void cadastrarRoteiro(vector<Roteiros>& novoroteiro){
     int codigo = 0 ;
     string origem;
     string destino;
+    Data datahoraprevista;
 
     Roteiros item_novo;
     
-    cin.ignore(); 
-
-    cout << "Digite o codigo : ";
+   cout <<"Digite o codigo :";
     cin >> codigo;
-    
+    while (true)
+    {
+       
+        if (localizarRoteiro(novoroteiro, validarCodigo(codigo))!=-1){
+            cout <<"Digite um outro codigo :";
+            cin >> codigo;
+        }else{
+           break; 
+        }
+    }
+    ///o codigo foi encontrado
+        
+    item_novo.codigo = codigo;
+
     cin.ignore();
     cout << "Digite a origem : ";
     getline(cin, origem);
     item_novo.origem = validarCampo(origem, "origem");
    
-
     cout<< "Digite o destino : ";
     getline(cin, destino);
     item_novo.destino = validarCampo(destino, "destino");
+    
+    cout<< "Digite a data : ";
+    cin >> datahoraprevista.data;
 
-    while (localizarRoteiro(novoroteiro, validarCodigo(codigo))!=-1){//o codigo foi encontrado
-        cout << "Codigo já registrado!"<<endl;
-        cout <<"Digite um outro codigo :";
-        cin >> codigo;
-    }
+    cout<< "Digite a hora : ";
+    cin >> datahoraprevista.hora;
 
-    item_novo.codigo = codigo;
+    
+    item_novo.data_hora_prevista = datahoraprevista;
 
     novoroteiro.push_back(item_novo);
 
@@ -203,6 +234,7 @@ void listarRoteiros(const vector<Roteiros>& roteiros) {
             cout << "Código: " << roteiro.codigo << endl;
             cout << "Origem: " << roteiro.origem << endl;
             cout << "Destino: " << roteiro.destino << endl;
+            cout << "Data e hora: " << roteiro.data_hora_prevista.data <<" " << roteiro.data_hora_prevista.hora << endl;
             cout << "-------------------" << endl;
         }
     }

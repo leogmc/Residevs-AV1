@@ -1,2 +1,3 @@
 # Residevs-AV1
-Este repositório é referente a Avaliação I do programa.
+
+Este programa abri diretamente no arquivo main.cpp
