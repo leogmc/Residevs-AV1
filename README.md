@@ -13,17 +13,37 @@ MENU PRINCIPAL:
 GESTÃO DE EMBARQUES:
 
 
-(2)1.Incluir embarque - Leandro
+(2) 1.Incluir embarque - Leandro
 
 
-(3)2.Excluir embarque - Deniel
+(3) 2.Excluir embarque - Deniel
 
 
-(4)3.Alterar embarque - Carlos
+(4) 3.Alterar embarque - Carlos
 
 
-(5)4.Listar embarque / 0. Sair. Retorna para um menu anterior. - Lorena
+(5) 4.Listar embarque / 0. Sair. Retorna para um menu anterior. - Lorena
 
+
+
+===========================
+
+GESTÃO DE OCORRENCIA:
+
+
+(6) 1.Incluir ocorrência
+
+
+(7) 2.Excluir ocorrência 
+
+
+(8) 3.Alterar ocorrência 
+
+
+(9) 4.Listar todas as ocorrências por Passageiro 
+
+
+(10) 5. Listar todas as ocorrências por Roteiro
 
 
 Normas (Case Sensitive):
